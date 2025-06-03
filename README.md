@@ -96,8 +96,8 @@ No additional payloads or network connections were observed.
 - No remediation required
 
 ### 📌 Lessons Learned / Next Steps:
-- Added custom detection for encoded PowerShell usage
-- Recommended monitoring for follow-up behaviors (like downloads or reverse shells)
+- In the real world, I'd add custom detection for encoded PowerShell usage
+- I'd also recommend monitoring for follow-up behaviors (like downloads or reverse shells)
 
 ---
 
