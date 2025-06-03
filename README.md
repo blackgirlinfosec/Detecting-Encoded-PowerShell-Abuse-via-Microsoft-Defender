@@ -101,13 +101,6 @@ No additional payloads or network connections were observed.
 
 ---
 
-## 🗣️ Interview-Ready Summary
-
-> “In one of my labs, I simulated an attacker using PowerShell’s `-EncodedCommand` flag to execute a hidden command. After running the command on a test VM, I used Microsoft Defender Advanced Hunting to detect it through KQL.  
-Once I confirmed the activity, I pivoted to look at the process timeline and verified that no other payloads or lateral movement occurred. In a real-world setting, I would isolate the device, terminate the process, and investigate file events to find and remove any malicious payloads.”
-
----
-
 ## 🧰 Tools Used
 
 - Microsoft Defender for Endpoint  
