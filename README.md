@@ -44,7 +44,6 @@ DeviceProcessEvents
 - ![⚙️ Attacker Command Executed](encoded-command-simulation-executed.png)
 - ![🛡️ Defender Detection](encoded-command-detected-in-defender.png)
 - ![📄 Event Details](encoded-command-event-details.png)
-- ![✅ VM Onboarded](vm-onboarding-success.png)
 
 ---
 
