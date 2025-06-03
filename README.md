@@ -69,6 +69,46 @@ If this were a real attack, these steps would follow detection:
 
 ---
 
+## 📝 SOC-Style Incident Report
+
+**Title**: Suspicious Encoded PowerShell Command Detected  
+**Analyst**: Fee Bolden  
+**Date**: June 2, 2025  
+**Device**: blueteamwin10  
+**User**: system
+
+### ⚠️ Alert Type:
+Suspicious Command-Line Activity
+
+### 🧪 Behavior:
+A PowerShell process was executed with the `-EncodedCommand` flag, commonly used by attackers to hide malicious scripts in Base64 format.
+
+The decoded command in this instance was harmless:
+```powershell
+Write-Output "Suspicious PowerShell Abuse Simulation"
+```
+
+No additional payloads or network connections were observed.
+
+### 🔍 Actions Taken:
+- Investigated device timeline in Microsoft Defender
+- Verified that no additional processes or file drops occurred
+- Confirmed activity was part of a controlled simulation
+- No remediation required
+
+### 📌 Lessons Learned / Next Steps:
+- Added custom detection for encoded PowerShell usage
+- Recommended monitoring for follow-up behaviors (like downloads or reverse shells)
+
+---
+
+## 🗣️ Interview-Ready Summary
+
+> “In one of my labs, I simulated an attacker using PowerShell’s `-EncodedCommand` flag to execute a hidden command. After running the command on a test VM, I used Microsoft Defender Advanced Hunting to detect it through KQL.  
+Once I confirmed the activity, I pivoted to look at the process timeline and verified that no other payloads or lateral movement occurred. In a real-world setting, I would isolate the device, terminate the process, and investigate file events to find and remove any malicious payloads.”
+
+---
+
 ## 🧰 Tools Used
 
 - Microsoft Defender for Endpoint  
@@ -81,4 +121,3 @@ If this were a real attack, these steps would follow detection:
 ## ✅ Outcome
 
 Successfully simulated and detected the use of an obfuscated PowerShell command. Demonstrated real-world detection, triage, and basic response logic using Microsoft Defender and KQL.
-
